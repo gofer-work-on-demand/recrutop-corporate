@@ -1,0 +1,20 @@
+Nouvelle demande de contact - Recrutop
+========================================
+
+INFORMATIONS DU CONTACT
+------------------------
+Nom et prénom : {{from_name}}
+Email : {{from_email}}
+Téléphone : {{telephone}}
+Société : {{societe}}
+Type : {{type}}
+Domaine choisi : {{domaine}}
+
+MESSAGE
+-------
+{{message}}
+
+---
+Email envoyé depuis le formulaire de contact Recrutop
+Date : {{date}}
+

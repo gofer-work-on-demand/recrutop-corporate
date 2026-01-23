@@ -5,25 +5,25 @@ const sectors = [
         title: "Construction & Patrimoine",
         text: "Intérim, insertion et recrutement pour le BTP, les grands travaux et la restauration du patrimoine, avec des équipes formées à la sécurité et aux environnements techniques complexes.",
         accentColor: "var(--accent-orange)",
-        icon: "/assets/btp.png",
+        icon: "/assets/artbtp.png",
     },
     {
         title: "Hôtellerie, Restauration & Événementiel",
         text: "Renforts et recrutements pour les hôtels, restaurants, traiteurs et acteurs de l'événementiel, en cuisine, salle, réception et service banquet.",
         accentColor: "var(--accent-coral)",
-        icon: "/assets/hotellerie.png",
+        icon: "/assets/hotellerierestauration.png",
     },
     {
         title: "Technique, Maintenance & Opérations",
         text: "Profils techniques pour la maintenance industrielle et tertiaire, le multi-technique, le CVC et la technique événementielle.",
         accentColor: "var(--primary-blue)",
-        icon: "/assets/maintenance.png",
+        icon: "/assets/eventmecatech.png",
     },
     {
-        title: "Insertion, Espaces verts & Parcours carrière",
+        title: "Insertion, Espaces verts & Carrière",
         text: "Solutions d'insertion, équipes encadrées en espaces verts et accompagnement des recrutements durables avec Recrutop Carrière.",
         accentColor: "var(--accent-green)",
-        icon: "/assets/espaces-verts.png",
+        icon: "/assets/insertionespaceverts.png",
     },
 ];
 export function KeySectorsStrip() {

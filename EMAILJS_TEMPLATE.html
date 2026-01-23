@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    .email-container {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 8px 8px 0 0;
+      margin: -30px -30px 30px -30px;
+      text-align: center;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .content {
+      margin-top: 20px;
+    }
+    .info-section {
+      background-color: #f8f9fa;
+      border-left: 4px solid #3b82f6;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+    .info-row {
+      display: flex;
+      margin: 10px 0;
+      padding: 8px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .info-row:last-child {
+      border-bottom: none;
+    }
+    .info-label {
+      font-weight: bold;
+      color: #1e3a8a;
+      min-width: 150px;
+      margin-right: 10px;
+    }
+    .info-value {
+      color: #333;
+      flex: 1;
+    }
+    .message-section {
+      background-color: #f8f9fa;
+      border: 1px solid #e5e7eb;
+      border-radius: 4px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .message-section h3 {
+      margin-top: 0;
+      color: #1e3a8a;
+      font-size: 18px;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 10px;
+    }
+    .message-content {
+      color: #333;
+      white-space: pre-wrap;
+      line-height: 1.8;
+    }
+    .footer {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 2px solid #e5e7eb;
+      text-align: center;
+      color: #6b7280;
+      font-size: 12px;
+    }
+    .badge {
+      display: inline-block;
+      background-color: #3b82f6;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="header">
+      <h1>📧 Nouvelle demande de contact</h1>
+    </div>
+    
+    <div class="content">
+      <div class="info-section">
+        <div class="info-row">
+          <span class="info-label">👤 Nom et prénom :</span>
+          <span class="info-value">{{from_name}}</span>
+        </div>
+        
+        <div class="info-row">
+          <span class="info-label">📧 Email :</span>
+          <span class="info-value">{{from_email}}</span>
+        </div>
+        
+        <div class="info-row">
+          <span class="info-label">📞 Téléphone :</span>
+          <span class="info-value">{{telephone}}</span>
+        </div>
+        
+        <div class="info-row">
+          <span class="info-label">🏢 Société :</span>
+          <span class="info-value">{{societe}}</span>
+        </div>
+        
+        <div class="info-row">
+          <span class="info-label">👥 Type :</span>
+          <span class="info-value">
+            {{type}}
+            {{#if_eq type "client"}}
+              <span class="badge">Client</span>
+            {{/if_eq}}
+            {{#if_eq type "candidat"}}
+              <span class="badge">Candidat</span>
+            {{/if_eq}}
+          </span>
+        </div>
+        
+        <div class="info-row">
+          <span class="info-label">🎯 Domaine choisi :</span>
+          <span class="info-value"><strong>{{domaine}}</strong></span>
+        </div>
+      </div>
+      
+      <div class="message-section">
+        <h3>💬 Message :</h3>
+        <div class="message-content">{{message}}</div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>Email envoyé depuis le formulaire de contact Recrutop</p>
+      <p>{{date}}</p>
+    </div>
+  </div>
+</body>
+</html>
+

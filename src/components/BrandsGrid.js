@@ -1,4 +1,5 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { useState } from "react";
 import { brands } from "../data/brands";
 const brandGroups = [
     {
@@ -17,15 +18,37 @@ const brandGroups = [
         color: "var(--primary-blue)",
     },
     {
-        label: "Insertion, Espaces verts & Carrière",
-        brandNames: ["Passerelle", "Garden", "Recrutop Carrière"],
+        label: "Insertion & Espaces verts",
+        brandNames: ["Passerelle", "Garden"],
         color: "var(--accent-green)",
+    },
+    {
+        label: "CDI / CDD",
+        brandNames: ["Recrutop Carrière"],
+        color: "var(--primary-blue)",
     },
 ];
 export function BrandsGrid() {
-    return (_jsx("section", { id: "marques", className: "brands-section", children: _jsxs("div", { className: "container", children: [_jsxs("div", { className: "brands-header", children: [_jsx("h2", { children: "Nos marques sp\u00E9cialis\u00E9es" }), _jsx("p", { children: "Chaque domaine s'appuie sur des marques expertes : vous travaillez avec des \u00E9quipes qui connaissent vos m\u00E9tiers, tout en b\u00E9n\u00E9ficiant de la force d'un groupe." })] }), _jsx("div", { className: "brand-groups", children: brandGroups.map((group) => {
-                        const groupBrands = brands.filter((brand) => group.brandNames.includes(brand.name));
-                        return (_jsxs("div", { className: "brand-group", children: [_jsx("h3", { className: "brand-group-title", style: { "--group-color": group.color }, children: group.label }), _jsx("div", { className: "brands-grid", children: groupBrands.map((brand) => (_jsxs("div", { className: "brand-logo-card", children: [_jsx("img", { src: brand.logoSrc, alt: brand.logoAlt }), _jsx("span", { children: brand.name })] }, brand.name))) })] }, group.label));
-                    }) })] }) }));
+    const [selectedBrand, setSelectedBrand] = useState(null);
+    const handleBrandClick = (brandName) => {
+        const brand = brands.find((b) => b.name === brandName);
+        if (brand) {
+            setSelectedBrand(brand);
+            document.body.style.overflow = "hidden";
+        }
+    };
+    const handleCloseModal = () => {
+        setSelectedBrand(null);
+        document.body.style.overflow = "";
+    };
+    return (_jsxs(_Fragment, { children: [_jsx("section", { id: "marques", className: "brands-section", children: _jsxs("div", { className: "container", children: [_jsxs("div", { className: "brands-header", children: [_jsx("h2", { children: "Nos marques sp\u00E9cialis\u00E9es" }), _jsx("p", { children: "Chaque domaine s'appuie sur des marques expertes : vous travaillez avec des \u00E9quipes qui connaissent vos m\u00E9tiers, tout en b\u00E9n\u00E9ficiant de la force d'un groupe." })] }), _jsx("div", { className: "brand-groups", children: brandGroups.map((group) => {
+                                const groupBrands = brands.filter((brand) => group.brandNames.includes(brand.name));
+                                return (_jsxs("div", { className: "brand-group", children: [_jsx("h3", { className: "brand-group-title", style: { "--group-color": group.color }, children: group.label }), _jsx("div", { className: "brands-grid", children: groupBrands.map((brand) => (_jsxs("div", { className: "brand-logo-card", onClick: () => handleBrandClick(brand.name), role: "button", tabIndex: 0, onKeyDown: (e) => {
+                                                    if (e.key === "Enter" || e.key === " ") {
+                                                        e.preventDefault();
+                                                        handleBrandClick(brand.name);
+                                                    }
+                                                }, children: [_jsx("img", { src: brand.logoSrc, alt: brand.logoAlt }), _jsx("span", { children: brand.name })] }, brand.name))) })] }, group.label));
+                            }) })] }) }), selectedBrand && (_jsx("div", { className: "brand-modal-overlay", onClick: handleCloseModal, children: _jsxs("div", { className: "brand-modal", onClick: (e) => e.stopPropagation(), children: [_jsx("button", { className: "brand-modal-close", onClick: handleCloseModal, "aria-label": "Fermer", children: "\u00D7" }), _jsxs("div", { className: "brand-modal-content", children: [_jsxs("div", { className: "brand-modal-header", children: [_jsx("img", { src: selectedBrand.logoSrc, alt: selectedBrand.logoAlt, className: "brand-modal-logo" }), _jsx("h2", { children: selectedBrand.name })] }), _jsxs("div", { className: "brand-modal-body", children: [selectedBrand.mission && (_jsxs("div", { className: "brand-modal-section", children: [_jsx("h3", { children: "Notre mission" }), _jsx("p", { children: selectedBrand.mission })] })), _jsxs("div", { className: "brand-modal-section", children: [_jsx("h3", { children: "Pr\u00E9sentation" }), _jsx("div", { className: "brand-description", children: selectedBrand.description.split('\n\n').map((paragraph, index) => (_jsx("p", { children: paragraph }, index))) })] }), selectedBrand.sectors && selectedBrand.sectors.length > 0 && (_jsxs("div", { className: "brand-modal-section", children: [_jsx("h3", { children: "Nos secteurs d'intervention" }), _jsx("ul", { className: "brand-modal-list", children: selectedBrand.sectors.map((sector, idx) => (_jsx("li", { children: sector }, idx))) })] })), selectedBrand.jobs && selectedBrand.jobs.length > 0 && (_jsxs("div", { className: "brand-modal-section", children: [_jsx("h3", { children: "Nos m\u00E9tiers" }), _jsx("ul", { className: "brand-modal-list", children: selectedBrand.jobs.map((job, idx) => (_jsx("li", { children: job }, idx))) })] })), selectedBrand.strengths && selectedBrand.strengths.length > 0 && (_jsxs("div", { className: "brand-modal-section", children: [_jsx("h3", { children: "Nos points forts" }), _jsx("ul", { className: "brand-modal-list", children: selectedBrand.strengths.map((strength, idx) => (_jsx("li", { children: strength }, idx))) })] })), selectedBrand.approach && (_jsxs("div", { className: "brand-modal-section", children: [_jsx("h3", { children: "Notre approche" }), _jsx("p", { children: selectedBrand.approach })] }))] })] })] }) }))] }));
 }
 export default BrandsGrid;
