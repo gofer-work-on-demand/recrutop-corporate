@@ -7,17 +7,20 @@ interface FooterProps {
 export function Footer({ onLegalLink }: FooterProps) {
   const handleLegalClick = (e: React.MouseEvent<HTMLAnchorElement>, page: string) => {
     e.preventDefault();
-    if (onLegalLink) {
-      onLegalLink(page);
-    }
+    if (onLegalLink) onLegalLink(page);
+  };
+
+  const scrollTo = (anchor: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    document.querySelector(anchor)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <footer className="footer" id="footer">
       <div className="container">
-        <div className="footer-content">
-          <div>
-            <div className="footer-company">Recrutop – Intérim, recrutement & insertion par pôles métiers</div>
+        <div className="footer-grid">
+          <div className="footer-col footer-about">
+            <div className="footer-company">Recrutop – Intérim & recrutement par filières métiers</div>
             <div className="footer-info">
               <div>141 avenue de Clichy, 75017 Paris</div>
               <div>
@@ -27,22 +30,36 @@ export function Footer({ onLegalLink }: FooterProps) {
                 <a href="mailto:contact@recrutop.fr">contact@recrutop.fr</a>
               </div>
             </div>
+            <div className="footer-social">
+              <h4 className="footer-title">Réseaux sociaux</h4>
+              <div className="footer-social-links">
+                <a href="https://www.linkedin.com/company/recrutop" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Recrutop">LinkedIn</a>
+              </div>
+            </div>
           </div>
-          <div>
-            <nav className="footer-links" aria-label="Liens du pied de page">
-              <a href="#" onClick={(e) => handleLegalClick(e, "mentions-legales")}>
-                Mentions légales
-              </a>
-              <a href="#" onClick={(e) => handleLegalClick(e, "politique-confidentialite")}>
-                Politique de confidentialité
-              </a>
-              <a href="#" onClick={(e) => handleLegalClick(e, "accessibilite")}>
-                Accessibilité
-              </a>
-              <a href="https://recrutement.recrutop.fr/" target="_blank" rel="noopener noreferrer">
-                Site carrière
-              </a>
-            </nav>
+          <div className="footer-col footer-links-block">
+            <h4 className="footer-title">Nos filières métiers</h4>
+            <a href="#filières" onClick={scrollTo("#filières")}>Toutes les filières</a>
+          </div>
+          <div className="footer-col footer-links-block">
+            <h4 className="footer-title">Passerelle (Insertion)</h4>
+            <a href="#insertion" onClick={scrollTo("#insertion")}>Découvrir Passerelle</a>
+            <a href="https://passerelle-insertion.fr" target="_blank" rel="noopener noreferrer">Site Passerelle</a>
+          </div>
+          <div className="footer-col footer-legal">
+            <h4 className="footer-title">Informations</h4>
+            <a href="#" onClick={(e) => handleLegalClick(e, "mentions-legales")}>
+              Mentions légales / RGPD
+            </a>
+            <a href="https://recrutement.recrutop.fr/" target="_blank" rel="noopener noreferrer">
+              Recrutement
+            </a>
+            <a href="#" onClick={(e) => handleLegalClick(e, "politique-confidentialite")}>
+              Politique de confidentialité
+            </a>
+            <a href="#" onClick={(e) => handleLegalClick(e, "accessibilite")}>
+              Accessibilité
+            </a>
           </div>
         </div>
       </div>

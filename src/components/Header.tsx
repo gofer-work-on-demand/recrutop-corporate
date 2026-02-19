@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
 const links = [
-  { label: "Accueil", anchor: "#hero" },
-  { label: "Secteurs", anchor: "#secteurs" },
-  { label: "Marques", anchor: "#marques" },
-  { label: "Notre approche", anchor: "#approche" },
-  { label: "Valeurs", anchor: "#valeurs" },
-  { label: "Contact", anchor: "#contact" },
+  { label: "Nos filières métiers", anchor: "#filières" },
+  { label: "Entreprises", anchor: "#entreprises" },
+  { label: "Candidats / Intérimaires", anchor: "#candidats" },
+  { label: "Passerelle (Insertion)", anchor: "#insertion" },
+  { label: "Qui sommes-nous", anchor: "#pourquoi-recrutop" },
+  { label: "Contact", anchor: "#contact-rapide" },
 ];
 
 export function Header() {
@@ -17,7 +17,7 @@ export function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = links.map((link) => link.anchor.substring(1));
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + 120;
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -37,6 +37,15 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add("header-menu-open-active");
+    } else {
+      document.body.classList.remove("header-menu-open-active");
+    }
+    return () => document.body.classList.remove("header-menu-open-active");
+  }, [menuOpen]);
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
     e.preventDefault();
     const element = document.querySelector(anchor);
@@ -46,11 +55,20 @@ export function Header() {
     }
   };
 
+  const handleCtaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.querySelector("#filières");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false);
+    }
+  };
+
   return (
-    <header id="header">
-      <div className="container">
+    <header id="header" className={menuOpen ? "header-menu-open" : ""}>
+      <div className="header-inner container">
         <nav aria-label="Navigation principale">
-          <div className="logo">
+          <a href="#hero" className="logo" onClick={(e) => handleNavClick(e, "#hero")}>
             {!logoError ? (
               <img
                 src="/assets/recrutop-logo.png"
@@ -58,9 +76,9 @@ export function Header() {
                 onError={() => setLogoError(true)}
               />
             ) : (
-              <span>recrutop</span>
+              <span>Recrutop</span>
             )}
-          </div>
+          </a>
           <div className="nav-links">
             {links.map((link) => (
               <a
@@ -73,12 +91,11 @@ export function Header() {
               </a>
             ))}
             <a
-              href="https://recrutement.recrutop.fr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
+              href="#filières"
+              className="btn btn-primary header-cta"
+              onClick={handleCtaClick}
             >
-              Accéder au site carrière
+              Trouver ma filière
             </a>
           </div>
           <button
@@ -93,8 +110,10 @@ export function Header() {
             <span />
           </button>
         </nav>
-        {menuOpen && (
-          <div className="mobile-menu open">
+      </div>
+      {menuOpen && (
+        <div className="mobile-menu open" role="dialog" aria-label="Menu de navigation">
+          <div className="mobile-menu-inner container">
             {links.map((link) => (
               <a
                 key={link.anchor}
@@ -106,17 +125,15 @@ export function Header() {
               </a>
             ))}
             <a
-              href="https://recrutement.recrutop.fr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-              onClick={() => setMenuOpen(false)}
+              href="#filières"
+              className="btn btn-primary mobile-menu-cta"
+              onClick={handleCtaClick}
             >
-              Accéder au site carrière
+              Trouver ma filière
             </a>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 }

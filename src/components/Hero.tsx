@@ -12,21 +12,19 @@ export function Hero() {
       <div className="container">
         <div className="hero-grid">
           <div className="hero-content">
-            <span className="badge">Ultra spécialisé – 5 secteurs clés</span>
-            <h1>Recrutop, groupe d'intérim, de recrutement et d'insertion</h1>
-            <p>
-              Recrutop accompagne les entreprises et les candidats dans 5 univers : construction &
-              patrimoine, hôtellerie–restauration & événementiel, technique & maintenance, insertion &
-              espaces verts, CDI / CDD avec Recrutop Carrière. Un groupe, des pôles spécialisés, une même
-              exigence de qualité.
+            <h1>L’intérim et le recrutement par filières métiers spécialisées.</h1>
+            <p className="hero-subtitle">
+              Chez Recrutop, chaque filière est dédiée à un univers métier précis, avec des équipes expertes et ancrées terrain.
             </p>
-            <p>
-              Identifiez en quelques secondes vos secteurs, les marques du groupe et le bon point d'entrée
-              selon que vous êtes candidat ou client.
+            <p className="hero-subtitle hero-subtitle-strong">
+              Des spécialistes, pas des généralistes.
+            </p>
+            <p className="hero-microproof">
+              Une filière = des métiers ciblés = des consultants qui parlent votre langage.
             </p>
             <div className="hero-actions">
-              <a href="#secteurs" className="btn btn-primary" onClick={handleScrollTo("#secteurs")}>
-                Découvrir nos secteurs
+              <a href="#contact-rapide" className="btn btn-primary" onClick={handleScrollTo("#contact-rapide")}>
+                Je suis une entreprise
               </a>
               <a
                 href="https://recrutement.recrutop.fr/"
@@ -34,12 +32,12 @@ export function Hero() {
                 rel="noopener noreferrer"
                 className="btn btn-secondary"
               >
-                Voir les offres d'emploi
+                Je suis candidat / intérimaire
               </a>
             </div>
           </div>
           <div className="hero-visual" aria-hidden="true">
-            <img src="/assets/hero.png" alt="Équipe Recrutop" />
+            <img src="/assets/hero.png" alt="" />
           </div>
         </div>
       </div>

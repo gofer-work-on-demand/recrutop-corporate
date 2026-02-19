@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import KeySectorsStrip from "./components/KeySectorsStrip";
-import BrandsGrid from "./components/BrandsGrid";
-import WhyChooseUs from "./components/WhyChooseUs";
-import ValuesSection from "./components/ValuesSection";
-import IllustratedStepsForCandidatesAndClients from "./components/IllustratedStepsForCandidatesAndClients";
-import CallToActionDual from "./components/CallToActionDual";
+import NotreModele from "./components/NotreModele";
+import BusGrid from "./components/BusGrid";
+import InsertionSection from "./components/InsertionSection";
+import EntreprisesSection from "./components/EntreprisesSection";
+import CandidatsSection from "./components/CandidatsSection";
+import PourquoiRecrutop from "./components/PourquoiRecrutop";
+import ContactRapide from "./components/ContactRapide";
 import Footer from "./components/Footer";
 import MentionsLegales from "./components/MentionsLegales";
 import PolitiqueConfidentialite from "./components/PolitiqueConfidentialite";
@@ -72,12 +73,15 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <KeySectorsStrip />
-        <BrandsGrid />
-        <WhyChooseUs />
-        <ValuesSection />
-        <IllustratedStepsForCandidatesAndClients />
-        <CallToActionDual />
+        <NotreModele />
+        <BusGrid />
+        <InsertionSection />
+        <div className="audience-blocks container">
+          <EntreprisesSection />
+          <CandidatsSection />
+        </div>
+        <PourquoiRecrutop />
+        <ContactRapide />
       </main>
       <Footer onLegalLink={handleLegalLink} />
       {renderLegalModal()}
