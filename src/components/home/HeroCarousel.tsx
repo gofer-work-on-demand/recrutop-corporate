@@ -4,6 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
+import { withBasePath } from "@/config/site";
 
 /** Visuels depuis `public/assets/` */
 const slides = [
@@ -89,7 +90,7 @@ export function HeroCarousel() {
           {slides.map((slide, i) => (
             <div key={slide.src} className="relative h-full min-w-0 flex-[0_0_100%]">
               <Image
-                src={slide.src}
+                src={withBasePath(slide.src)}
                 alt={slide.alt}
                 fill
                 className="slide__image object-cover"

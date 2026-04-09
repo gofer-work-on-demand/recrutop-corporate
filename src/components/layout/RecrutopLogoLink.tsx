@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "@/config/site";
 
 type Props = {
   /** Header : fond clair. Footer : fond #002C55 — logo lisible via léger éclaircissement */
@@ -15,7 +16,7 @@ export function RecrutopLogoLink({ placement }: Props) {
       aria-label="Recrutop — accueil"
     >
       <Image
-        src="/assets/recrutop-logo.png"
+        src={withBasePath("/assets/recrutop-logo.png")}
         alt="Recrutop"
         width={220}
         height={48}
