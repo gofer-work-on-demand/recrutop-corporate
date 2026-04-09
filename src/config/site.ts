@@ -4,5 +4,13 @@ export const CAREER_SITE_URL =
 
 export const PASSERELLE_SITE_URL = "https://www.passerelle-insertion.fr/";
 
+export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+export function withBasePath(path: string): string {
+  if (!path) return path;
+  if (/^https?:\/\//.test(path)) return path;
+  return `${BASE_PATH}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
 export const SITE_TAGLINE =
   "Recrutop, groupe d'intérim, de recrutement et d'insertion : 4 domaines, 9 marques spécialisées.";

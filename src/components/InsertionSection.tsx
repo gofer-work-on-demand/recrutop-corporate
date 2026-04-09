@@ -1,3 +1,5 @@
+import { withBasePath } from "@/config/site";
+
 export function InsertionSection() {
   const handleScrollTo = (anchor: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -10,7 +12,7 @@ export function InsertionSection() {
       <div className="container">
         <div className="insertion-header">
           <img
-            src="/assets/passerelle-logo.png"
+            src={withBasePath("/assets/passerelle-logo.png")}
             alt=""
             className="insertion-logo"
             aria-hidden="true"

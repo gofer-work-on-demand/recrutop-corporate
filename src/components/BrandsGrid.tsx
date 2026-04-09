@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { brands } from "../data/brands";
+import { withBasePath } from "@/config/site";
 
 const brandGroups = [
   {
@@ -83,7 +84,7 @@ export function BrandsGrid() {
                           }
                         }}
                       >
-                        <img src={brand.logoSrc} alt={brand.logoAlt} />
+                        <img src={withBasePath(brand.logoSrc)} alt={brand.logoAlt} />
                         <span>{brand.name}</span>
                       </div>
                     ))}
@@ -107,7 +108,11 @@ export function BrandsGrid() {
             </button>
             <div className="brand-modal-content">
               <div className="brand-modal-header">
-                <img src={selectedBrand.logoSrc} alt={selectedBrand.logoAlt} className="brand-modal-logo" />
+                <img
+                  src={withBasePath(selectedBrand.logoSrc)}
+                  alt={selectedBrand.logoAlt}
+                  className="brand-modal-logo"
+                />
                 <h2>{selectedBrand.name}</h2>
               </div>
               <div className="brand-modal-body">

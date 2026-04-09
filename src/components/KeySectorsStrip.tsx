@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { withBasePath } from "@/config/site";
 
 const sectors = [
   {
@@ -85,7 +86,7 @@ export function KeySectorsStrip() {
                 >
                   <div className="sector-card-carousel">
                     <div className="sector-image-wrapper">
-                      <img src={sector.icon} alt={sector.title} />
+                      <img src={withBasePath(sector.icon)} alt={sector.title} />
                     </div>
                     <div className="sector-content">
                       <h3>{sector.title}</h3>
