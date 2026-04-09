@@ -7,11 +7,12 @@ const SITE_CARRIERE_URL = "https://recrutement.recrutop.fr/";
 const specialites = [
   "Travaux Publics & Génie Civil",
   "Métiers d'Art & Monuments Historiques",
-  "Espaces Verts",
-  "Hôtellerie & Restauration",
-  "RECRUTOP Event",
-  "Mecatech",
-  "Recrutop Carrière (CDI/CDD)",
+  "Événementiel Technique",
+  "Hôtellerie & Restauration Haut de Gamme",
+  "Maintenance & Métiers Techniques",
+  "Espaces Verts & Paysage",
+  "Restauration Collective",
+  "Cabinet Placement (CDI / CDD)",
   "Passerelle (Insertion)",
 ];
 

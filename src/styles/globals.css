@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* === COULEURS GROUPE — charte 2026–2030 === */
+  --color-primary: #0052a7;
+  --color-dark: #002c55;
+  --color-accent: #fab885;
+  --color-accent-dark: #e09a6e;
+  --color-text: #4b4f58;
+  --color-bg-light: #f4f5f7;
+  --color-white: #ffffff;
+  /* Alias compat (anciennes pages) */
+  --color-bg: #f4f5f7;
+  --color-border: rgba(75, 79, 88, 0.12);
+  --color-text-muted: rgba(75, 79, 88, 0.72);
+
+  /* BU / domaines */
+  --color-gofer: #00738e;
+  --color-resto: #44769f;
+  --color-event: #99b4c2;
+  --color-passerelle: #ed7402;
+  --color-passerelle-navy: #1b3862;
+  --color-garden: #1b9f46;
+  --color-carriere: #eaac5a;
+  --color-jpsi: #d1252a;
+  --color-art-interim: #eaac5a;
+  --color-mecatech: #619db9;
+  --color-mecatech-alt: #71b1cd;
+
+  /* Anciennes variables « filière » (pages legacy /filieres) */
+  --color-filiere-tp: var(--color-jpsi);
+  --color-filiere-patrimoine: var(--color-art-interim);
+  --color-filiere-event: var(--color-event);
+  --color-filiere-hotel: var(--color-resto);
+  --color-filiere-paysage: var(--color-garden);
+  --color-filiere-maintenance: var(--color-mecatech);
+
+  --font-heading: var(--font-manrope), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  --radius-card: 16px;
+  --radius-card-sm: 12px;
+  --header-height: 4.5rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    background-color: var(--color-white);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .label-caps {
+    @apply text-xs font-semibold uppercase tracking-[0.15em];
+    color: var(--color-text);
+    opacity: 0.85;
+  }
+
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 44, 85, 0.35) transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 44, 85, 0.28);
+    border-radius: 9999px;
+  }
+}

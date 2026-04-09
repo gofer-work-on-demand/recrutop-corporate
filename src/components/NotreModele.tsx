@@ -1,17 +1,17 @@
 const benefits = [
   {
     title: "Pertinence",
-    text: "Profils adaptés aux réalités du terrain.",
+    text: "Des recrutements plus justes, parce que l'évaluation part du métier réel.",
     icon: "✓",
   },
   {
     title: "Réactivité",
-    text: "Équipes dédiées, process fluides.",
+    text: "Des équipes capables d'identifier plus vite les bons profils et les vrais prérequis.",
     icon: "⚡",
   },
   {
     title: "Exigence",
-    text: "Sécurité, savoir-faire, savoir-être.",
+    text: "Une sélection fondée sur les compétences, les habilitations et l'adéquation au terrain.",
     icon: "★",
   },
 ];
@@ -23,8 +23,8 @@ export function NotreModele() {
         <div className="notre-modele-header">
           <h2>Notre modèle : la spécialisation métier, au service de la qualité</h2>
           <p>
-            Nous avons fait un choix structurant : organiser Recrutop par filières métiers spécialisées.
-            Chaque filière développe une connaissance fine de ses métiers, de ses contraintes opérationnelles et de ses exigences terrain.
+            Recrutop a fait un choix structurant : organiser l'entreprise par filières métiers spécialisées.
+            Chaque équipe développe une connaissance concrète des métiers, des contraintes opérationnelles, des exigences terrain et des besoins clients propres à son secteur.
           </p>
         </div>
         <div className="notre-modele-benefits">

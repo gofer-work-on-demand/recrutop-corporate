@@ -6,9 +6,9 @@ export function CandidatsSection() {
   };
 
   const points = [
-    "Missions adaptées à votre profil",
-    "Accompagnement et montée en compétences",
-    "Opportunités dans des filières ciblées",
+    "Des missions ciblées par filière",
+    "Une meilleure compréhension de vos conditions terrain",
+    "Un accompagnement plus précis et des opportunités cohérentes",
   ];
 
   return (
@@ -17,7 +17,7 @@ export function CandidatsSection() {
         <div className="candidats-content">
             <h2>Candidats & intérimaires : des missions cohérentes avec votre métier</h2>
             <p>
-              Vous êtes accompagné par des consultants spécialisés sur votre univers : compréhension des conditions terrain, des attentes et des parcours.
+              Chez Recrutop, vous n'entrez pas dans une base généraliste. Vous êtes orienté vers une filière qui connaît vos métiers, vos conditions d'exercice et les opportunités adaptées à votre profil.
             </p>
             <ul className="candidats-points">
               {points.map((item) => (

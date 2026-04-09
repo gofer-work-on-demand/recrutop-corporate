@@ -6,10 +6,10 @@ export function EntreprisesSection() {
   };
 
   const preuves = [
-    "Profils ciblés, alignés métier",
-    "Exigence sécurité et conformité",
-    "Réactivité, continuité de service",
-    "Suivi opérationnel et qualité",
+    "Profils ciblés et alignés métier",
+    "Évaluation technique, sécurité et conformité",
+    "Réactivité opérationnelle et continuité de service",
+    "Suivi précis du besoin et de la qualité de mission",
   ];
 
   return (
@@ -18,7 +18,7 @@ export function EntreprisesSection() {
         <div className="entreprises-content">
             <h2>Entreprises : des experts métiers pour vos enjeux terrain</h2>
             <p>
-              Vous gagnez en pertinence et en fiabilité : nos équipes connaissent vos contraintes avant même de proposer des profils.
+              Vous ne cherchez pas seulement un profil disponible. Vous cherchez un profil capable d'être opérationnel dans votre environnement réel, avec vos contraintes, vos standards et votre niveau d'exigence.
             </p>
             <ul className="entreprises-preuves">
               {preuves.map((item) => (
@@ -26,7 +26,7 @@ export function EntreprisesSection() {
               ))}
             </ul>
             <a href="#contact-rapide" className="btn btn-primary" onClick={handleCta}>
-              Être rappelé par un expert filière
+              Parler à un expert métier
             </a>
           </div>
       </div>

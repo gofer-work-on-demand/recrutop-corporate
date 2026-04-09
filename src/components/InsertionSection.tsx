@@ -15,20 +15,20 @@ export function InsertionSection() {
             className="insertion-logo"
             aria-hidden="true"
           />
-          <h2>Passerelle : Le trait d'union vers l'emploi durable</h2>
+          <h2>Passerelle : le trait d'union vers l'emploi durable</h2>
           <blockquote className="insertion-quote">
-            « Le talent n'a pas de parcours type, il n'a que des potentiels. »
+            « L'insertion n'est pas une filière : c'est un engagement transversal. »
           </blockquote>
           <p>
-            Passerelle est notre entité dédiée à l'Insertion par l'Activité Économique (IAE). Elle identifie des profils éloignés de l'emploi pour les former et les intégrer au cœur de nos Business Units spécialisées.
+            Passerelle porte notre démarche d'insertion et d'accompagnement social et professionnel. Elle facilite l'accès à l'emploi, la montée en compétences et l'orientation vers les filières métiers du groupe.
           </p>
         </div>
         <ul className="insertion-points">
           <li>
-            <strong>Impact Social :</strong> Transformer l'engagement en compétence métier.
+            <strong>Accompagnement structuré :</strong> un suivi social et professionnel orienté vers l'emploi durable.
           </li>
           <li>
-            <strong>Synergie Groupe :</strong> Un accès privilégié à nos filières d'experts (Espaces Verts, TP, Event…).
+            <strong>Connexion terrain :</strong> une passerelle concrète vers les filières métiers, les premières missions et la montée en compétences.
           </li>
         </ul>
         <div className="insertion-ctas">
