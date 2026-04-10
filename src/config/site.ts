@@ -13,4 +13,4 @@ export function withBasePath(path: string): string {
 }
 
 export const SITE_TAGLINE =
-  "Recrutop, groupe d'intérim, de recrutement et d'insertion : 4 domaines, 8 marques spécialisées.";
+  "Recrutop, groupe d'intérim, de recrutement et d'insertion : 5 secteurs d'activité, 8 marques spécialisées.";
