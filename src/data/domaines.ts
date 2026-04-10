@@ -16,19 +16,19 @@ export const domaines: DomaineData[] = [
     slug: "chr-evenementiel",
     nom: "CHR & Événementiel",
     couleur: "#00738E",
-    tagline: "Hôtellerie, restauration et événementiel technique",
+    tagline: "Hôtellerie / Restauration et événementiel technique",
     description:
-      "Des équipes dédiées aux brigades cuisine et salle, aux renforts digitaux via Gofer, et aux techniciens son, lumière et plateau.",
-    marques: ["restauration-rambouillet", "gofer", "event"],
+      "Avec GOFER pour l'hôtellerie et la restauration, et Event pour la technique, des équipes adaptées aux besoins des sites.",
+    marques: ["gofer", "event"],
   },
   {
     slug: "insertion-jardins",
-    nom: "Insertion / Espaces verts / Carrière",
+    nom: "Insertion & Espaces verts",
     couleur: "#ED7402",
-    tagline: "Insertion, paysage et recrutement direct",
+    tagline: "Insertion et métiers des espaces verts",
     description:
-      "De l'IAE avec Passerelle aux équipes Garden et au cabinet Recrutop Carrière : un même groupe pour des parcours exigeants et adaptés.",
-    marques: ["passerelle", "garden", "recrutop-carriere"],
+      "De l'ETTI avec Passerelle aux équipes Garden : un même groupe pour des parcours exigeants et adaptés.",
+    marques: ["passerelle", "garden"],
   },
   {
     slug: "construction",

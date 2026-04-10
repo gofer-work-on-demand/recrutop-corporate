@@ -40,8 +40,8 @@ export function PasserelleSection() {
           Le talent n&apos;a pas de parcours type, il n&apos;a que des potentiels.
         </p>
         <p className="mt-6 max-w-3xl text-white/85">
-          Passerelle est notre entité dédiée à l&apos;Insertion par l&apos;Activité Économique
-          (IAE). Elle identifie des profils éloignés de l&apos;emploi, les forme et les intègre
+          Passerelle est notre entité dédiée à l&apos;Entreprise de Travail Temporaire
+          d&apos;Insertion (ETTI). Elle identifie des profils éloignés de l&apos;emploi, les forme et les intègre
           au cœur de nos domaines spécialisés.
         </p>
         <ul className="mt-10 grid gap-4 md:grid-cols-3">

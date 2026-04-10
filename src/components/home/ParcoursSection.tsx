@@ -69,7 +69,7 @@ export function ParcoursSection() {
               ))}
             </ul>
             <Button href={CAREER_SITE_URL} external variant="outline" className="mt-8">
-              Accéder au site carrière →
+              Nos offres →
             </Button>
           </motion.div>
         </motion.div>

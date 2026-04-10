@@ -68,7 +68,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/marques/passerelle" className={linkClass}>
-                  Insertion (IAE)
+                  Insertion (ETTI)
                 </Link>
               </li>
             </ul>

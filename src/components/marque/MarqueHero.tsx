@@ -18,7 +18,10 @@ export function MarqueHero({ marque }: { marque: MarqueData }) {
             </li>
             <li aria-hidden>/</li>
             <li>
-              <Link href={`/domaines/${marque.domaineSlug}`} className="hover:underline">
+              <Link
+                href={marque.domaineBreadcrumbHref ?? `/domaines/${marque.domaineSlug}`}
+                className="hover:underline"
+              >
                 {marque.domaineLabel}
               </Link>
             </li>

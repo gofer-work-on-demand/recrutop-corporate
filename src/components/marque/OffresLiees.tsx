@@ -14,7 +14,7 @@ export function OffresLiees({ marque }: { marque: MarqueData }) {
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <h2 className="font-heading text-2xl font-bold text-dark">Offres liées</h2>
         <p className="mt-2 text-sm text-text">
-          Accédez aux opportunités publiées sur notre site carrière (Magnet).
+          Accédez aux opportunités publiées sur notre site offres (Magnet).
         </p>
         <ul className="mt-8 grid gap-4 md:grid-cols-3">
           {placeholders.map((t) => (

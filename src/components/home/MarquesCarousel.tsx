@@ -24,7 +24,7 @@ export function MarquesCarousel() {
           variants={fadeUp}
         >
           <h2 className="text-center font-heading text-2xl font-bold text-dark sm:text-3xl lg:text-4xl">
-            9 marques spécialisées
+            8 marques spécialisées
           </h2>
           <p className="mx-auto mt-3 max-w-2xl px-1 text-center text-sm text-text sm:mt-4 sm:text-base">
             Un groupe, des expertises distinctes, une même exigence de qualité.

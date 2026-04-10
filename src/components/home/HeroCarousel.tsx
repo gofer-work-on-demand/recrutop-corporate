@@ -29,7 +29,7 @@ const slides = [
   {
     src: "/assets/hotellerierestauration.png",
     alt: "Service en hôtellerie et restauration",
-    tagline: "Hôtellerie & Restauration",
+    tagline: "Hôtellerie / Restauration",
     color: "#44769F",
   },
   {
@@ -48,7 +48,7 @@ const slides = [
 
 export function HeroCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 4000, stopOnInteraction: false }),
+    Autoplay({ delay: 2200, stopOnInteraction: false }),
   ]);
   const [selectedIndex, setSelectedIndex] = useState(0);
 

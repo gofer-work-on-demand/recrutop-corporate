@@ -20,7 +20,7 @@ export function MegaMenuMarques({ onNavigate }: { onNavigate?: () => void }) {
       role="menu"
     >
       <p className="mb-4 text-center text-xs font-semibold uppercase tracking-[0.15em] text-text/80">
-        9 marques — expertises distinctes, une même exigence
+        8 marques — expertises distinctes, une même exigence
       </p>
       <ul className="grid gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3">
         {ordered.map((m) => (

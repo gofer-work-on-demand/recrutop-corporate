@@ -9,8 +9,8 @@ const sectors = [
     icon: "/assets/artbtp.png",
   },
   {
-    title: "Hôtellerie, Restauration & Événementiel",
-    text: "Renforts et recrutements pour les hôtels, restaurants, traiteurs et acteurs de l'événementiel, en cuisine, salle, réception et service banquet.",
+    title: "GOFER : Hôtellerie / Restauration",
+    text: "Renforts et recrutements pour les hôtels et restaurants, en cuisine, salle, réception et service.",
     accentColor: "var(--accent-coral)",
     icon: "/assets/hotellerierestauration.png",
   },
@@ -21,12 +21,11 @@ const sectors = [
     icon: "/assets/eventmecatech.png",
   },
   {
-    title: "Insertion, Espaces verts & Carrière",
-    text: "Solutions d'insertion, équipes encadrées en espaces verts et accompagnement des recrutements durables avec Recrutop Carrière.",
+    title: "Insertion & Espaces verts",
+    text: "Solutions d'insertion avec Passerelle et équipes encadrées en espaces verts avec Garden.",
     accentColor: "var(--accent-green)",
     icon: "/assets/insertionespaceverts.png",
   },
-  
 ];
 
 export function KeySectorsStrip() {

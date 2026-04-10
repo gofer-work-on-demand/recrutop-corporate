@@ -1,5 +1,4 @@
 export type MarqueSlug =
-  | "restauration-rambouillet"
   | "gofer"
   | "event"
   | "passerelle"
@@ -42,6 +41,8 @@ export interface MarqueData {
   couleur: string;
   domaineSlug: DomaineSlug;
   domaineLabel: string;
+  /** Fil d’Ariane : lien du « domaine » si différent de `/domaines/{domaineSlug}` */
+  domaineBreadcrumbHref?: string;
   tagline: string;
   description: string;
   activite: string;
@@ -59,92 +60,18 @@ export interface MarqueData {
 
 export const marques: MarqueData[] = [
   {
-    slug: "restauration-rambouillet",
-    nom: "Restauration Rambouillet",
-    couleur: "#44769F",
-    domaineSlug: "chr-evenementiel",
-    domaineLabel: "CHR & Événementiel",
-    tagline: "Intérim restauration & traiteur",
-    description:
-      "Pôle restauration : intérim et renforts en cuisine, salle, plonge et traiteur.",
-    activite:
-      "Intérim et renforts en cuisine, salle, plonge et traiteur pour la restauration collective, les brasseries et l'événementiel culinaire.",
-    secteurDescription:
-      "Nous sécurisons vos pics d'activité et la continuité de service avec des profils rodés aux contraintes terrain.",
-    chiffresCles: [],
-    enjeux: [
-      {
-        titre: "Fluidité opérationnelle",
-        texte: "Renforts ciblés sur vos métiers cuisine, salle et plonge.",
-      },
-      {
-        titre: "Conformité et hygiène",
-        texte: "Process d'évaluation adaptés aux exigences HACCP et au rythme des services.",
-      },
-    ],
-    metiers: [
-      {
-        categorie: "Cuisine & production",
-        items: [
-          "Commis de cuisine",
-          "Cuisinier",
-          "Chef de partie",
-          "Pâtissier",
-          "Plongeur",
-        ],
-      },
-      {
-        categorie: "Salle & accueil",
-        items: [
-          "Serveur",
-          "Runner",
-          "Chef de rang",
-          "Barman",
-          "Hôte/Hôtesse d'accueil",
-        ],
-      },
-    ],
-    habilitations: ["HACCP / hygiène", "SST"],
-    methodeEvaluation: [
-      {
-        etape: 1,
-        titre: "Analyse du besoin",
-        texte: "Volume, contraintes, environnement (colléctif, brasserie, événementiel).",
-      },
-      {
-        etape: 2,
-        titre: "Sourcing ciblé",
-        texte: "Identification de profils avec expérience comparable.",
-      },
-      {
-        etape: 3,
-        titre: "Évaluation terrain",
-        texte: "Vérification des gestes et du niveau d'autonomie attendu.",
-      },
-      {
-        etape: 4,
-        titre: "Suivi & ajustement",
-        texte: "Pilotage opérationnel et feedback client.",
-      },
-    ],
-    valeurAjoutee: [
-      "Une équipe spécialisée restauration, pas un vivier généraliste",
-      "Réactivité sur les créneaux critiques (soirées, week-ends, pics)",
-    ],
-  },
-  {
     slug: "gofer",
-    nom: "Gofer",
+    nom: "GOFER",
     couleur: "#00738E",
     domaineSlug: "chr-evenementiel",
     domaineLabel: "CHR & Événementiel",
-    tagline: "L'intérim 100% digital CHR",
+    tagline: "Hôtellerie / Restauration",
     description:
-      "Application dédiée aux hôtels, restaurants et bars pour des extras et renforts rapides.",
+      "La marque GOFER du groupe pour l'hôtellerie et la restauration.",
     activite:
-      "Application 100% digitale dédiée aux hôtels, restos et bars pour trouver rapidement des extras et renforts en salle, cuisine et réception.",
+      "Renforts et recrutements en hôtellerie et restauration : réception, salle, cuisine et service.",
     secteurDescription:
-      "Gofer connecte besoins et disponibilités en temps réel, avec le même niveau d'exigence Recrutop.",
+      "GOFER mobilise des profils alignés sur vos exigences de service et la réactivité terrain Recrutop.",
     chiffresCles: [],
     enjeux: [
       {
@@ -269,12 +196,12 @@ export const marques: MarqueData[] = [
     nom: "Passerelle",
     couleur: "#ED7402",
     domaineSlug: "insertion-jardins",
-    domaineLabel: "Insertion / Espaces verts / Carrière",
-    tagline: "IAE — insertion par l'activité économique",
+    domaineLabel: "Insertion & Espaces verts",
+    tagline: "ETTI — insertion par l'activité économique",
     description:
       "Entité dédiée aux publics éloignés de l'emploi : accompagnement, formation et intégration dans nos filières.",
     activite:
-      "Insertion par l'Activité Économique (IAE) — accompagnement de publics éloignés de l'emploi via des missions encadrées, un suivi socio-professionnel et la réponse aux clauses sociales.",
+      "Entreprise de Travail Temporaire d'Insertion (ETTI) — accompagnement de publics éloignés de l'emploi via des missions encadrées, un suivi socio-professionnel et la réponse aux clauses sociales.",
     secteurDescription:
       "Passerelle est le trait d'union entre engagement sociétal et expertises métiers du groupe.",
     chiffresCles: [],
@@ -322,7 +249,7 @@ export const marques: MarqueData[] = [
       },
     ],
     valeurAjoutee: [
-      "Une entité IAE au sein d'un groupe à forte technicité métier",
+      "Une entité ETTI au sein d'un groupe à forte technicité métier",
       "Un parcours personnalisé, pas une promesse générique",
     ],
     siteExterne: "https://www.passerelle-insertion.fr/",
@@ -333,7 +260,7 @@ export const marques: MarqueData[] = [
     nom: "Garden",
     couleur: "#1B9F46",
     domaineSlug: "insertion-jardins",
-    domaineLabel: "Insertion / Espaces verts / Carrière",
+    domaineLabel: "Insertion & Espaces verts",
     tagline: "Espaces verts & propreté urbaine",
     description:
       "Équipes terrain pour parcs, jardins et sites publics ou privés.",
@@ -404,8 +331,9 @@ export const marques: MarqueData[] = [
     slug: "recrutop-carriere",
     nom: "Recrutop Carrière",
     couleur: "#EAAC5A",
-    domaineSlug: "insertion-jardins",
-    domaineLabel: "Insertion / Espaces verts / Carrière",
+    domaineSlug: "chr-evenementiel",
+    domaineLabel: "CDD / CDI",
+    domaineBreadcrumbHref: "/#recrutement-cdd-cdi",
     tagline: "Cabinet recrutement CDI / CDD",
     description:
       "Recrutement direct de profils qualifiés et managers sur l'ensemble des univers couverts par le groupe.",
@@ -731,9 +659,8 @@ export function getMarquesByDomaine(domaineSlug: DomaineSlug): MarqueData[] {
   return marques.filter((m) => m.domaineSlug === domaineSlug);
 }
 
-/** Ordre d'affichage homepage / mega menu (9 marques) */
+/** Ordre d'affichage homepage / mega menu (8 marques) */
 export const marquesOrdreAffichage: MarqueSlug[] = [
-  "restauration-rambouillet",
   "gofer",
   "event",
   "passerelle",

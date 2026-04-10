@@ -5,6 +5,7 @@ import { ParcoursSection } from "@/components/home/ParcoursSection";
 import { PasserelleSection } from "@/components/home/PasserelleSection";
 import { PourquoiSection } from "@/components/home/PourquoiSection";
 import { ConversionCtaSection } from "@/components/home/ConversionCtaSection";
+import { RecrutementCddCdiBand } from "@/components/home/RecrutementCddCdiBand";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <ParcoursSection />
       <PasserelleSection />
       <PourquoiSection />
+      <RecrutementCddCdiBand />
       <ConversionCtaSection />
     </>
   );

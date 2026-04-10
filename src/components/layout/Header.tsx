@@ -119,10 +119,10 @@ export function Header() {
               external
               variant="primary"
               className="!px-4 !py-2.5 text-xs xl:!px-6 xl:!py-3 xl:text-sm"
-              aria-label="Accéder au site carrière"
+              aria-label="Accéder à nos offres"
             >
-              <span className="hidden xl:inline">Accéder au site carrière →</span>
-              <span className="xl:hidden">Carrière →</span>
+              <span className="hidden xl:inline">Nos offres →</span>
+              <span className="xl:hidden">Offres →</span>
             </Button>
           </div>
 
@@ -256,9 +256,9 @@ export function Header() {
                   external
                   className="w-full justify-center text-sm"
                   onClick={() => setMobileOpen(false)}
-                  aria-label="Accéder au site carrière"
+                  aria-label="Accéder à nos offres"
                 >
-                  Accéder au site carrière →
+                  Nos offres →
                 </Button>
               </div>
             </motion.aside>

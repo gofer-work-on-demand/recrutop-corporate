@@ -10,7 +10,7 @@ const brandGroups = [
   },
   {
     label: "Hôtellerie, Restauration & Événementiel",
-    brandNames: ["Gofer", "Recrutop Rambouillet Restauration", "Recrutop Event"],
+    brandNames: ["GOFER", "Recrutop Event"],
     color: "var(--accent-coral)",
   },
   {

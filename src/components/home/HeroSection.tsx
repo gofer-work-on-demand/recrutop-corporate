@@ -9,14 +9,14 @@ export function HeroSection() {
       <div className="mx-auto grid max-w-content gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-center lg:gap-14 lg:px-8">
         <div className="hero__content order-2 flex flex-col justify-center lg:order-1">
           <span className="inline-flex w-fit rounded-pill border border-primary/20 bg-bg-light px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-primary font-heading">
-            Ultra spécialisé · 4 domaines · 9 marques
+            Ultra spécialisé · 4 secteurs d&apos;activité
           </span>
           <h1 className="mt-6 font-heading text-3xl font-bold leading-tight tracking-tight text-dark sm:text-4xl lg:text-[2.35rem] xl:text-5xl text-balance">
             Recrutop, groupe d&apos;intérim, de recrutement et d&apos;insertion
           </h1>
           <p className="subtitle mt-5 max-w-xl text-lg text-text">
             Recrutop accompagne les entreprises et les candidats dans 4 univers : construction &
-            patrimoine, hôtellerie-restauration & événementiel, technique & maintenance, insertion &
+            patrimoine, hôtellerie & restauration / événementiel, technique & maintenance, insertion &
             espaces verts. Un groupe, des pôles spécialisés, une même exigence de qualité.
           </p>
           <p className="micro-text mt-4 max-w-lg text-sm text-text/85">
@@ -26,7 +26,7 @@ export function HeroSection() {
           <div className="cta-row mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Button href="/#domaines">Découvrir nos secteurs →</Button>
             <Button href={CAREER_SITE_URL} external variant="outline">
-              Voir les offres d&apos;emploi
+              Nos offres
             </Button>
           </div>
         </div>

@@ -59,7 +59,7 @@ export function ConversionCtaSection() {
           </Link>
           ,{" "}
           <Link href="/#marques" className="font-semibold underline-offset-2 hover:underline">
-            9 marques
+            8 marques
           </Link>
           .
         </p>

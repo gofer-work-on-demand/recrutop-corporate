@@ -22,7 +22,7 @@ export default function NotreApprochePage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-text">
             Recrutop est un groupe d&apos;intérim, de recrutement et d&apos;insertion structuré en{" "}
-            <strong>4 domaines</strong> et <strong>9 marques</strong>. Chaque marque incarne un univers
+            <strong>4 domaines</strong> et <strong>8 marques</strong>. Chaque marque incarne un univers
             métier : pas de discours généraliste, mais des équipes qui comprennent votre terrain.
           </p>
           <p className="mt-4 max-w-2xl text-text">

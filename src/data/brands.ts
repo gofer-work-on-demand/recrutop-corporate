@@ -77,60 +77,31 @@ export const brands: Brand[] = [
     approach: "Notre approche repose sur la sélection rigoureuse d'artisans compagnons maîtrisant parfaitement les techniques traditionnelles. Chaque professionnel est évalué sur sa connaissance des matériaux anciens, sa maîtrise des techniques d'origine et son expérience dans la restauration patrimoniale. Nous garantissons le respect strict des techniques traditionnelles et des matériaux d'origine, conformément aux exigences des Monuments Historiques. Notre réseau exclusif nous permet d'intervenir sur les chantiers les plus prestigieux avec des artisans reconnus pour leur excellence.",
   },
   {
-    name: "Gofer",
+    name: "GOFER",
     domain: "hr",
-    description: "Gofer est la signature \"Premium\" du groupe Recrutop, exclusivement dédiée à l'hôtellerie de luxe (hôtels 4*, 5*, Palaces) et aux lieux d'exception. Spécialisée dans le recrutement de personnel haut de gamme pour l'hospitalité de luxe, Gofer garantit un niveau d'excellence et de discrétion adapté aux exigences les plus élevées du secteur. Notre sélection rigoureuse et notre connaissance approfondie des codes du luxe font de Gofer le partenaire privilégié des établissements prestigieux.",
-    logoAlt: "Logo Gofer",
+    description:
+      "GOFER est la marque du groupe Recrutop dédiée à l'hôtellerie et à la restauration : renforts et recrutements en réception, salle, cuisine et service.",
+    logoAlt: "Logo GOFER",
     logoSrc: "/assets/gofer-logo.png",
-    mission: "Hôtellerie de Luxe & Prestige - Déléguer du personnel dont le savoir-être et la présentation (\"Grooming\") répondent aux standards les plus élevés de l'hospitalité de luxe",
+    mission:
+      "Hôtellerie / Restauration — Des équipes alignées sur vos exigences de service et la réactivité terrain.",
     sectors: [
-      "Hôtels de luxe 4* et 5* : Personnel qualifié pour les établissements haut de gamme",
-      "Palaces : Équipes expérimentées dans les établissements les plus prestigieux",
-      "Lieux d'exception : Restaurants gastronomiques, clubs privés, résidences de prestige",
-      "Événements premium : Service pour les événements haut de gamme et réceptions d'exception"
+      "Hôtellerie : accueil, housekeeping, étages, réception",
+      "Restauration : cuisine, salle, bar, service événementiel",
+      "Établissements et enseignes haut de gamme comme standards classiques",
     ],
     jobs: [
-      "Hébergement : Femmes de chambre / Valets de chambre, Gouvernantes, Équipiers d'étage, Responsables housekeeping",
-      "Accueil : Réceptionnistes multilingues, Bagagistes, Voituriers, Portiers, Concierges",
-      "Service & Cuisine : Maîtres d'hôtel, Chefs de rang, Serveurs, Commis de cuisine, Chefs de partie, Sommeliers"
+      "Réception, bagagiste, voiturier, concierge",
+      "Femme / valet de chambre, gouvernante",
+      "Serveur, chef de rang, barman, commis de cuisine, chef de partie",
     ],
     strengths: [
-      "Sélection rigoureuse basée sur l'attitude, le savoir-être et la présentation irréprochable",
-      "Maîtrise parfaite des codes du luxe et de l'étiquette hôtelière",
-      "Confidentialité absolue et discrétion garanties",
-      "Programme de fidélisation de nos meilleurs talents pour garantir la continuité",
-      "Formation continue aux standards du luxe et aux spécificités de chaque établissement",
-      "Réseau exclusif de professionnels expérimentés dans l'hôtellerie de prestige"
+      "Spécialisation CHR du groupe Recrutop",
+      "Sélection orientée savoir-faire et savoir-être",
+      "Capacité de réponse sur les créneaux critiques",
     ],
-    approach: "Notre approche repose sur une sélection extrêmement rigoureuse où l'attitude et le savoir-être priment. Chaque candidat est évalué sur sa présentation (grooming), sa maîtrise des codes du luxe, sa discrétion et son expérience dans l'hôtellerie haut de gamme. Nous développons un programme de fidélisation pour nos meilleurs talents, garantissant ainsi la continuité et la qualité du service. Chaque membre de notre équipe bénéficie d'une formation continue aux standards du luxe et aux spécificités de chaque établissement partenaire.",
-  },
-  {
-    name: "Recrutop Rambouillet Restauration",
-    domain: "hr",
-    description: "Recrutop Rambouillet Restauration est l'expert de la restauration volumique du groupe Recrutop. Cette Business Unit accompagne les traiteurs événementiels, la restauration d'entreprise (collective) et la restauration commerciale traditionnelle. Spécialisée dans la constitution rapide de brigades complètes, elle répond aux besoins urgents et récurrents du secteur de la restauration avec une réactivité exceptionnelle et des profils immédiatement opérationnels.",
-    logoAlt: "Logo Recrutop Rambouillet Restauration",
-    logoSrc: "/assets/restauration-logo.png",
-    mission: "Traiteurs, Collectivités & Restauration Commerciale - Constituer des brigades complètes en un temps record pour vos événements ou vos services quotidiens",
-    sectors: [
-      "Traiteurs événementiels : Équipes complètes pour mariages, séminaires, cocktails, événements corporate",
-      "Restauration d'entreprise (collective) : Personnel pour les restaurants d'entreprise, cafétérias, self-services",
-      "Restauration commerciale traditionnelle : Renforts pour brasseries, bistrots, restaurants gastronomiques",
-      "Événements ponctuels : Mobilisation rapide pour les pics d'activité et événements exceptionnels"
-    ],
-    jobs: [
-      "Cuisine : Cuisiniers, Chefs de partie, Commis de cuisine, Plongeurs, Écaillers, Pâtissiers",
-      "Salle : Maîtres d'hôtel, Chefs de rang, Serveurs, Barman/Barmaid, Hôtes/Hôtesses d'accueil, Sommeliers",
-      "Service : Équipiers polyvalents, Runners, Personnel de mise en place et de service"
-    ],
-    strengths: [
-      "Réactivité exceptionnelle : Constitution de brigades complètes en un temps record",
-      "Processus de recrutement standardisés pour garantir la qualité",
-      "Profils opérationnels immédiatement, adaptés au rythme soutenu du service",
-      "Réseau étendu de professionnels expérimentés dans la restauration volumique",
-      "Flexibilité totale : intervention ponctuelle ou régulière selon vos besoins",
-      "Connaissance approfondie des spécificités de chaque type de restauration"
-    ],
-    approach: "Notre approche repose sur la standardisation de nos processus de recrutement pour garantir des profils immédiatement opérationnels. Chaque candidat est évalué sur ses compétences techniques, son expérience dans la restauration volumique et sa capacité à s'adapter rapidement à un nouvel environnement. Nous développons un réseau de professionnels fidèles et expérimentés, capables d'intervenir en urgence tout en maintenant les standards de qualité exigés. Notre flexibilité nous permet de répondre aussi bien aux besoins ponctuels qu'aux besoins récurrents de nos clients.",
+    approach:
+      "Nous combinons expertise métier et process d'évaluation adaptés aux environnements hôteliers et de restauration.",
   },
   {
     name: "Recrutop Mecatech",
