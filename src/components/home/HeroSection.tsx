@@ -9,7 +9,7 @@ export function HeroSection() {
       <div className="mx-auto grid max-w-content gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-center lg:gap-14 lg:px-8">
         <div className="hero__content order-2 flex flex-col justify-center lg:order-1">
           <span className="inline-flex w-fit rounded-pill border border-primary/20 bg-bg-light px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-primary font-heading">
-            Ultra spécialisé · 4 secteurs d&apos;activité
+            Ultra spécialisé · 5 secteurs d&apos;activité
           </span>
           <h1 className="mt-6 font-heading text-3xl font-bold leading-tight tracking-tight text-dark sm:text-4xl lg:text-[2.35rem] xl:text-5xl text-balance">
             Recrutop, groupe d&apos;intérim, de recrutement et d&apos;insertion
